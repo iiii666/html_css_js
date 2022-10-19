@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자리 배치도</title>
+</head>
+<body>
+  <h1>자리 배치도</h1>
+  <script>
+    var member = prompt("몇 명이 입장객인가요?");
+    var oneLine = prompt("한 줄에 몇명이 앉나요?");
+    var rowNum =0;
+    if(member % oneLine === 0){
+      rowNum = parseInt(member / oneLine);
+    }else{
+      rowNum = parseInt(member / oneLine) + 1;
+    }
+    document.write("모두 "+ rowNum + "줄이 필요합니다!")
+  </script>
+</body>
+</html>

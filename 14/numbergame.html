@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  body{
+    background-color:antiquewhite;
+  }
+div {
+
+width: 320px;
+
+padding: 10px;
+
+border: 5px solid maroon;
+margin: 0;
+ transform: translate(300px, 300px);
+color: blueviolet;
+}
+
+  </style>
+</head>
+<body>
+  <div>
+  <script>
+    
+    
+    var x = parseInt(Math.random() * 100) +1;
+    var input;
+    var sample = 50;
+    var flag = false;
+    var count = 1;
+    do {
+      input = parseInt(prompt("1~100숫자를 입력하세요", sample));
+      
+      sample = input;
+      if(isNaN(input)==true){
+        alert("입력하세요;;;")
+      }else{
+        if(x >input){
+           alert(`${input} 보다 큽니다`);
+            count ++;
+         }else if(x< input){
+            alert(`${input} 보다 작습니다`);
+            count ++;
+         }else{
+           alert("정답!");
+           flag = true;
+         }
+      }
+      
+    } while (flag === false);
+
+    
+    document.write( "정답은 " + x + " " +count + "번 만에 맞춤 ㅋㅋㅊㅊㅊㅊㅊㅊ")
+
+
+  </script>
+  </div>
+</body>
+</html>

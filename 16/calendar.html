@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <table>
+
+    <caption>
+      달력
+    </caption>
+    <tr>
+      <th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>
+    </tr>
+    <tr>
+      
+    </tr>
+  </table>
+  <script>
+
+    let year = parseInt(prompt("년도"));
+    let month = parseInt(prompt("월"));
+
+    let now5 = new Date(year,month-1,01); 
+      let day = now5.getDay(); 
+      let now6 = new Date(year,month,0);
+      document.write(`
+<table>
+      <caption>달력</caption>
+        <tr>
+          <th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>
+          </tr>
+       
+    `);
+      for(let i =0; i<day;i++){
+        document.write(`<td></td>`);
+      }
+      for(let count = 1;count<=now6.getDate();count++){
+        if((day)%7==0){
+          document.write(`</tr><tr><td>${count}</td>`);
+        }else {
+        document.write(`<td>${count}</td>`);
+        }
+        day++;
+      }
+      document.write(`</tr></table>`);
+
+
+  </script>
+  
+</body>
+</html>
